@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4CD6B0"/>
+      <stop offset="35%" stop-color="#5C82E8"/>
+      <stop offset="68%" stop-color="#E8A94A"/>
+      <stop offset="100%" stop-color="#D662C9"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="15" fill="url(#g)"/>
+  <text x="32" y="45" font-family="'Noto Sans Malayalam', 'Nirmala UI', 'Noto Sans', sans-serif" font-weight="700" font-size="38" fill="#ffffff" text-anchor="middle">ശ</text>
+</svg>
