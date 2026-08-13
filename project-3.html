@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>
+(function(){
+  try{
+    var saved = localStorage.getItem('theme');
+    if (saved === 'dark') document.documentElement.setAttribute('data-theme','dark');
+  }catch(e){}
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Professor Course Management Dashboard — Shalini Daniel</title>
+<link rel="stylesheet" href="https://use.typekit.net/udq4abj.css">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="alternate icon" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+</head>
+<body>
+
+<div class="loader">
+  <div class="loader-mark"><span>ശാ</span><span>ലി</span><span>നി</span></div>
+  <div class="loader-word">Shalini Daniel</div>
+  <div class="loader-bar"><span></span></div>
+</div>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a class="nav-name" href="index.html" aria-label="Shalini Daniel — Home">ശാലിനി</a>
+    <div class="nav-links">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <a href="index.html">Work</a>
+      <a href="about.html">About</a>
+      <a href="assets/resume.pdf" target="_blank" rel="noopener">Resume</a>
+    </div>
+  </div>
+</nav>
+
+<header class="proj-hero">
+  <div class="wrap">
+    <a class="back-link" href="index.html">&larr; All projects</a>
+    <p class="eyebrow">Software Engineering Group Project</p>
+    <h1>Professor Course Management Dashboard</h1>
+    <p style="max-width:560px; color:var(--muted);">An open-source desktop app (PCMS) so professors can manage courses, rosters, and grades from one place, built in JavaFX with a four-person team as part of a software engineering course.</p>
+
+    <div class="proj-meta">
+      <div><span class="k">Role</span><span class="v">Project Manager</span></div>
+      <div><span class="k">Timeline</span><span class="v">April 2026</span></div>
+      <div><span class="k">Tools</span><span class="v">Figma, Java, JavaFX, Firebase</span></div>
+      <div><span class="k">Team</span><span class="v">4</span></div>
+      <div><span class="k">Repo</span><span class="v"><a href="https://github.com/Drizzy127/Software-Engineering-Project" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline; text-underline-offset:2px;">GitHub</a></span></div>
+    </div>
+
+    <div class="hero-image">
+      <img src="assets/pcms-cover.jpg" alt="PCMS login screen">
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="proj-body-layout">
+
+    <nav class="side-rail">
+      <a href="#overview">Overview</a>
+      <a href="#problem">Problem</a>
+      <a href="#process">Process</a>
+      <a href="#outcome">Outcome</a>
+      <a href="#reflection">Reflection</a>
+    </nav>
+
+    <div class="proj-content">
+
+      <section class="proj-section" id="overview">
+        <div class="story-beat">
+          <p class="eyebrow">Overview</p>
+          <h2 class="story-title">How do you spec a course management system before writing a line of code?</h2>
+          <div class="story-body">
+            <p>PCMS (Professor Course Management System) is an open-source desktop tool that lets professors view their courses for the semester, manage a class roster, update assignment weights, and communicate with colleagues — all from one place, instead of scattered across a university's broader systems.</p>
+            <p>Before any code went into the repository, our four-person team wrote a full Software Requirements Specification following the IEEE SRS standard, defining exactly what the system would do, who it was for, and what still needed deciding.</p>
+          </div>
+          <div class="beat-subgrid">
+            <div class="beat-subcard">
+              <h3>Secure professor login</h3>
+              <p>Authentication with hashed passwords and role-based access so only professors can see their own rosters.</p>
+            </div>
+            <div class="beat-subcard">
+              <h3>Course &amp; roster management</h3>
+              <p>View assigned courses, search enrolled students, and manage weighted grades per assignment.</p>
+            </div>
+            <div class="beat-subcard">
+              <h3>Dashboard &amp; social tab</h3>
+              <p>A real-time overview of courses and notifications, plus a space for professors to post announcements to each other.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="proj-section" id="problem">
+        <div class="story-beat">
+          <p class="eyebrow">Problem</p>
+          <h2 class="story-title">Professors needed a tool built around them, not the registrar.</h2>
+          <div class="story-body">
+            <p>Most institutional systems are broad, administrator-first platforms — powerful, but not built around how an individual professor actually works day to day: checking a roster, updating grade weights, or catching a quick announcement from a colleague. PCMS set out to be a lighter, open-source, professor-first alternative.</p>
+            <p>But before we could build that, a four-person team had to agree on what "course management" actually meant for this project. Writing a full IEEE-format SRS forced us to separate must-haves from nice-to-haves early, and to explicitly flag the decisions we weren't ready to make yet — like which database to build on — instead of guessing and re-deciding mid-build.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="proj-section" id="process">
+        <div class="story-beat">
+          <p class="eyebrow">Process</p>
+          <h2 class="story-title">Writing the spec as if the system already existed.</h2>
+          <div class="story-body">
+            <p>We followed the IEEE SRS template from product scope through to individual screens — login, dashboard, course view, student view, and a social tab — then broke the system into prioritized features. Authentication and profile management came first as high priority, with dashboard activity and roster management scoped right behind it as medium priority.</p>
+            <p>We also wrote out the nonfunctional side most student projects skip: performance targets (dashboard loads within 2 seconds, roster queries under 1 second, support for 50 concurrent sessions), safety requirements like automated 24-hour backups, and security rules like BCrypt password hashing and 30-minute session timeouts — plus FERPA compliance as an explicit business rule, since real student data privacy isn't optional.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="proj-section" id="outcome">
+        <div class="story-beat">
+          <p class="eyebrow">Outcome</p>
+          <p class="pull-quote">A working JavaFX desktop app professors can use to manage courses, rosters, grades, and each other.</p>
+          <div class="story-body" style="margin-top:20px;">
+            <p>We built the full application against that spec: secure login, a professor dashboard, course creation, roster management with weighted grades, and a social tab so professors can post announcements and collaborate with colleagues on the platform.</p>
+            <p>The database question got resolved as we built — we landed on Firebase and a NoSQL database for authentication, data storage, and real-time updates, rather than the SQL options the SRS had left open. That turned out to be a better fit for keeping the dashboard's activity feed and notifications current in real time.</p>
+          </div>
+          <p class="cap" style="margin-top:36px; margin-bottom:0;">Course creation, grading, and roster management</p>
+          <div class="story-media img-row thirds">
+            <div class="img-box filled">
+              <img src="assets/pcms-add-class.jpg" alt="PCMS Add Class form with fields for class code, name, season, section, and room">
+            </div>
+            <div class="img-box filled">
+              <img src="assets/pcms-add-grade.jpg" alt="PCMS Add Grade modal on a student profile page">
+            </div>
+            <div class="img-box filled">
+              <img src="assets/pcms-course-details.jpg" alt="PCMS course details page with grade weights and student roster">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="proj-section" id="reflection">
+        <div class="story-beat">
+          <p class="eyebrow">Reflection</p>
+          <h2 class="story-title">What I learned</h2>
+          <div class="reflection-grid">
+            <div class="reflection-card">
+              <h3>Requirements before pixels</h3>
+              <p>Writing stimulus/response sequences and functional requirements before touching JavaFX forced our team of four to agree on edge cases — like a 30-minute session timeout, or exactly who can see a student ID number — that we'd have otherwise only discovered mid-build.</p>
+            </div>
+            <div class="reflection-card">
+              <h3>Designing for who shouldn't see what</h3>
+              <p>Business rules like "only a professor can view rosters assigned to them" and FERPA compliance made permissions a first-class design decision from day one, instead of a feature bolted on after the fact.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</div>
+
+<section class="related-section">
+  <div class="wrap">
+    <div class="related-head">
+      <h2>You might also like</h2>
+      <a class="all-link" href="index.html">All projects &rarr;</a>
+    </div>
+    <div class="related-grid">
+      <a class="related-card" href="project-1.html">
+        <div class="thumb">
+          <img src="assets/coming-soon.jpg" alt="Animal Shelter Database — coming soon">
+          <span class="thumb-index">01</span>
+          
+        </div>
+        <p class="tag">Project 01</p>
+        <h3>Animal Shelter Database</h3>
+      </a>
+      <a class="related-card" href="project-2.html">
+        <div class="thumb">
+          <img src="assets/tvg-cover.jpg" alt="The Village at Glencliff website">
+          <span class="thumb-index">02</span>
+          
+        </div>
+        <p class="tag">Project 02</p>
+        <h3>The Village at Glencliff</h3>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="contact">
+  <div class="wrap contact-row">
+    <div>
+      <p class="contact-name">Shalini Daniel</p>
+      <p class="contact-tag">Open to internships, collaborations, and community-focused projects.</p>
+    </div>
+    <div class="contact-links">
+      <a href="mailto:shalinid15000@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/shalini-daniel/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/shaliiid" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+  <div class="wrap foot-meta">
+    <span class="local-time" id="localTime">My local time</span>
+    <span>&copy; 2026 Shalini Daniel</span>
+  </div>
+</footer>
+
+<script src="assets/interactions.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>
+(function(){
+  try{
+    var saved = localStorage.getItem('theme');
+    if (saved === 'dark') document.documentElement.setAttribute('data-theme','dark');
+  }catch(e){}
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shalini Daniel — Portfolio</title>
+<link rel="stylesheet" href="https://use.typekit.net/udq4abj.css">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="alternate icon" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+</head>
+<body>
+
+<div class="loader">
+  <div class="loader-mark"><span>ശാ</span><span>ലി</span><span>നി</span></div>
+  <div class="loader-word">Shalini Daniel</div>
+  <div class="loader-bar"><span></span></div>
+</div>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a class="nav-name" href="index.html" aria-label="Shalini Daniel — Home">ശാലിനി</a>
+    <div class="nav-links">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <a href="index.html" class="active">Work</a>
+      <a href="about.html">About</a>
+      <a href="assets/resume.pdf" target="_blank" rel="noopener">Resume</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Designing and building projects meant to better community.</h1>
+    <p>I'm a computer science undergraduate student, aiming to transform how we use tech altruistically.</p>
+  </div>
+</header>
+
+<section class="project-list">
+  <div class="wrap">
+    <p class="section-label">Selected Projects</p>
+
+    <a class="project-card" href="project-1.html">
+      <div class="thumb">
+        <img src="assets/coming-soon.jpg" alt="Animal Shelter Database — coming soon">
+        <span class="thumb-index">01</span>
+      </div>
+      <div class="card-body">
+        <h3>Animal Shelter Database <span class="status-banner" style="margin:0 0 0 8px; vertical-align:middle; font-size:10.5px; padding:4px 10px 4px 8px;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg>In progress</span></h3>
+        <p>Rethinking how a local animal shelter functions on all levels, from adopting an animal to operational management.</p>
+        <span class="card-link">View project <span class="arrow">→</span></span>
+      </div>
+    </a>
+
+    <a class="project-card" href="project-2.html">
+      <div class="thumb">
+        <img src="assets/tvg-cover.jpg" alt="The Village at Glencliff website shown on a laptop">
+        <span class="thumb-index">02</span>
+      </div>
+      <div class="card-body">
+        <h3>The Village At Glencliff</h3>
+        <p>Worked with Develop For Good so that the Nashville community can easily access, understand, and engage with The Village At Glencliff's medical respite mission.</p>
+        <span class="card-link">View project <span class="arrow">→</span></span>
+      </div>
+    </a>
+
+    <a class="project-card" href="project-3.html">
+      <div class="thumb">
+        <img src="assets/pcms-cover.jpg" alt="PCMS login screen shown on a laptop">
+        <span class="thumb-index">03</span>
+      </div>
+      <div class="card-body">
+        <h3>Professor Course Management Dashboard</h3>
+        <p>An open-source JavaFX desktop app (PCMS) so professors can manage courses, rosters, and grades from one place — built with a four-person software engineering team.</p>
+        <span class="card-link">View project <span class="arrow">→</span></span>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<footer class="contact">
+  <div class="wrap contact-row">
+    <div>
+      <p class="contact-name">Shalini Daniel</p>
+      <p class="contact-tag">Open to internships, collaborations, and community-focused projects.</p>
+    </div>
+    <div class="contact-links">
+      <a href="mailto:shalinid15000@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/shalini-daniel/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/shaliiid" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+  <div class="wrap foot-meta">
+    <span class="local-time" id="localTime">My local time</span>
+    <span>&copy; 2026 Shalini Daniel</span>
+  </div>
+</footer>
+
+<script src="assets/interactions.js"></script>
+</body>
+</html>

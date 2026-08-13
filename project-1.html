@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>
+(function(){
+  try{
+    var saved = localStorage.getItem('theme');
+    if (saved === 'dark') document.documentElement.setAttribute('data-theme','dark');
+  }catch(e){}
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animal Shelter Database — Shalini Daniel</title>
+<link rel="stylesheet" href="https://use.typekit.net/udq4abj.css">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="alternate icon" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+</head>
+<body>
+
+<div class="loader">
+  <div class="loader-mark"><span>ശാ</span><span>ലി</span><span>നി</span></div>
+  <div class="loader-word">Shalini Daniel</div>
+  <div class="loader-bar"><span></span></div>
+</div>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a class="nav-name" href="index.html" aria-label="Shalini Daniel — Home">ശാലിനി</a>
+    <div class="nav-links">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <a href="index.html">Work</a>
+      <a href="about.html">About</a>
+      <a href="assets/resume.pdf" target="_blank" rel="noopener">Resume</a>
+    </div>
+  </div>
+</nav>
+
+<header class="proj-hero">
+  <div class="wrap">
+    <a class="back-link" href="index.html">&larr; All projects</a>
+    <p class="eyebrow">Personal Project &middot; Ongoing</p>
+    <h1>Animal Shelter Database</h1>
+    <p style="max-width:560px; color:var(--muted);">A Python desktop app with a GUI, built to help a local animal shelter track animals from intake to adoption, coordinate volunteer shifts, and stay ahead of low supplies.</p>
+
+    <div class="status-banner">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg>
+      In progress &mdash; actively being designed and built
+    </div>
+
+    <div class="proj-meta">
+      <div><span class="k">Role</span><span class="v">Co-Developer &amp; Data Modeler</span></div>
+      <div><span class="k">Timeline</span><span class="v">Ongoing</span></div>
+      <div><span class="k">Tools</span><span class="v">Python, SQL, PySimpleGUI / Qt, Thonny</span></div>
+      <div><span class="k">Team</span><span class="v">2</span></div>
+      <div><span class="k">Repo</span><span class="v"><a href="https://github.com/sophia-lasala/Animal-Shelter-Database-GUI" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline; text-underline-offset:2px;">GitHub</a></span></div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="proj-body-layout">
+
+    <nav class="side-rail">
+      <a href="#overview">Overview</a>
+      <a href="#problem">Problem</a>
+      <a href="#process">Process</a>
+      <a href="#outcome">Progress</a>
+      <a href="#reflection">Reflection</a>
+    </nav>
+
+    <div class="proj-content">
+
+      <section class="proj-section" id="overview">
+        <div class="story-beat">
+          <p class="eyebrow">Overview</p>
+          <h2 class="story-title">How do you design a shelter database before you've picked your data structures?</h2>
+          <div class="story-body">
+            <p>This is a personal, ongoing project I'm building with my peer: a Python desktop app for a local animal shelter to track dogs and cats through intake, care, and adoption, alongside the volunteers who keep the shelter running.</p>
+            <p>We're also using it as a chance to actually apply what we're learning in our coursework — data structures for animal records, a SQL backend for volunteer data, a queues and search for supply warnings — instead of reaching for one generic structure for everything.</p>
+          </div>
+          <div class="beat-subgrid">
+            <div class="beat-subcard">
+              <h3>Animal records</h3>
+              <p>Name, intake date, walking difficulty, medicine, age, sex, and adoption status from Application Pending through Adopted.</p>
+            </div>
+            <div class="beat-subcard">
+              <h3>Volunteer scheduling</h3>
+              <p>A SQL-backed volunteer list with shift assignments, walking-difficulty clearance, and shift-leader roles.</p>
+            </div>
+            <div class="beat-subcard">
+              <h3>Supply warnings</h3>
+              <p>A priority queue to flag low food, medicine, and bowl supplies before they run out.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="proj-section" id="problem">
+        <div class="story-beat">
+          <p class="eyebrow">Problem</p>
+          <h2 class="story-title">One system, three very different kinds of data.</h2>
+          <div class="story-body">
+            <p>Animal records, volunteer schedules, and supply counts all need to live in the same system, but they don't behave the same way. Animal intake grows and shrinks like a list, volunteer information needs relational lookups (who's on shift with whom, who's cleared to walk which dogs), and supply counts need to actively trigger a warning before they hit zero, not just sit there as a number.</p>
+            <p>Picking the right structure for each piece — instead of forcing everything into one shape because it's simpler to build — became the real design problem before any GUI work started.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="proj-section" id="process">
+        <div class="story-beat">
+          <p class="eyebrow">Process</p>
+          <h2 class="story-title">Sketching the volunteer schema before writing a line of SQL.</h2>
+          <div class="story-body">
+            <p>Before touching the database, I mapped the Volunteers table on paper — name, ID, phone, email, rank, and join/leave dates — and how it connects outward to Shifts (hours, date, time, notes) and to Dogs through a walking-difficulty clearance level. I also sketched a smaller "shift buddies" idea: using a shared shift ID as a foreign key to surface which volunteers had worked together, a nice-to-have that only works if the relationships are modeled correctly from the start.</p>
+            <p>We ranked every feature by priority before building anything — animal records and adoption status came first, with a shift calendar and comments explicitly pushed to "later" — and weighed PySimpleGUI against the Qt framework for the interface layer, prototyping both in Thonny.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="proj-section" id="outcome">
+        <div class="story-beat">
+          <p class="eyebrow">Progress</p>
+          <p class="pull-quote">Still in progress — this page reflects where the design and build currently stand, not a finished product.</p>
+          <div class="story-body" style="margin-top:20px;">
+            <p>So far, the core data models are mapped out: animal records, the volunteer/shift schema, and the supply priority queue. Next up is wiring the SQL backend for volunteers, building out the GUI shell, then layering in the binary search tree for search and the low-supply warning system. Lower-priority features like a shift calendar and comments are intentionally saved for last. Alongside with designing a GUI for easily accessibility and understanding with the volunteers.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="proj-section" id="reflection">
+        <div class="story-beat">
+          <p class="eyebrow">Reflection</p>
+          <h2 class="story-title">What I'm learning so far</h2>
+          <div class="reflection-grid">
+            <div class="reflection-card">
+              <h3>Coursework goes beyond homework</h3>
+              <p>Matching each feature to the structure that actually fits it — an ArrayList for records, SQL for relational volunteer data, a priority queue for supply alerts — made coursework concepts click in a way lecture slides never did.</p>
+            </div>
+            <div class="reflection-card">
+              <h3>Design the relationships before the interface</h3>
+              <p>Sketching how Volunteers, Shifts, and Dogs connect — down to a shared shift ID as a foreign key — before opening a GUI builder is already saving me from having to redo the schema later.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</div>
+
+<section class="related-section">
+  <div class="wrap">
+    <div class="related-head">
+      <h2>You might also like</h2>
+      <a class="all-link" href="index.html">All projects &rarr;</a>
+    </div>
+    <div class="related-grid">
+      <a class="related-card" href="project-2.html">
+        <div class="thumb">
+          <img src="assets/tvg-cover.jpg" alt="The Village at Glencliff website">
+          <span class="thumb-index">02</span>
+          
+        </div>
+        <p class="tag">Project 02</p>
+        <h3>The Village at Glencliff</h3>
+      </a>
+      <a class="related-card" href="project-3.html">
+        <div class="thumb">
+          <img src="assets/pcms-cover.jpg" alt="PCMS login screen">
+          <span class="thumb-index">03</span>
+          
+        </div>
+        <p class="tag">Project 03</p>
+        <h3>Professor Course Management Dashboard</h3>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="contact">
+  <div class="wrap contact-row">
+    <div>
+      <p class="contact-name">Shalini Daniel</p>
+      <p class="contact-tag">Open to internships, collaborations, and community-focused projects.</p>
+    </div>
+    <div class="contact-links">
+      <a href="mailto:shalinid15000@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/shalini-daniel/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/shaliiid" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+  <div class="wrap foot-meta">
+    <span class="local-time" id="localTime">My local time</span>
+    <span>&copy; 2026 Shalini Daniel</span>
+  </div>
+</footer>
+
+<script src="assets/interactions.js"></script>
+</body>
+</html>

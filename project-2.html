@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>
+(function(){
+  try{
+    var saved = localStorage.getItem('theme');
+    if (saved === 'dark') document.documentElement.setAttribute('data-theme','dark');
+  }catch(e){}
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Village at Glencliff — Shalini Daniel</title>
+<link rel="stylesheet" href="https://use.typekit.net/udq4abj.css">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="alternate icon" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+</head>
+<body>
+
+<div class="loader">
+  <div class="loader-mark"><span>ശാ</span><span>ലി</span><span>നി</span></div>
+  <div class="loader-word">Shalini Daniel</div>
+  <div class="loader-bar"><span></span></div>
+</div>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a class="nav-name" href="index.html" aria-label="Shalini Daniel — Home">ശാലിനി</a>
+    <div class="nav-links">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <a href="index.html">Work</a>
+      <a href="about.html">About</a>
+      <a href="assets/resume.pdf" target="_blank" rel="noopener">Resume</a>
+    </div>
+  </div>
+</nav>
+
+<header class="proj-hero">
+  <div class="wrap">
+    <a class="back-link" href="index.html">&larr; All projects</a>
+    <p class="eyebrow">The Village at Glencliff &middot; Develop For Good, May&ndash;Aug 2026</p>
+    <h1>The Village at Glencliff</h1>
+    <p style="max-width:560px; color:var(--muted);">A Nashville nonprofit providing medical respite care for medically vulnerable, unhoused residents recovering from illness, injury, or hospitalization. I worked with a cross-functional team of eight to design a 10-page "Connected Campus" website unifying storytelling, donor engagement, volunteer coordination, and the groundwork for a HIPAA-compliant referral portal.</p>
+
+    <div class="proj-meta">
+      <div><span class="k">Role</span><span class="v">UX/UI Designer &amp; Researcher</span></div>
+      <div><span class="k">Timeline</span><span class="v">May &ndash; August 2026</span></div>
+      <div><span class="k">Tools</span><span class="v">Notion, Figma, Webflow, Adobe Creative Suite</span></div>
+      <div><span class="k">Team</span><span class="v">8</span></div>
+      <div><span class="k">Client</span><span class="v"><a href="https://www.villageatglencliff.org/" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline; text-underline-offset:2px;">villageatglencliff.org</a></span></div>
+    </div>
+
+    <div class="hero-image">
+      <img src="assets/tvg-cover.jpg" alt="The Village at Glencliff website homepage">
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="proj-body-layout">
+
+    <nav class="side-rail">
+      <a href="#overview">Overview</a>
+      <a href="#problem">Problem</a>
+      <a href="#research">Research</a>
+      <a href="#outcome">Outcome</a>
+      <a href="#reflection">Reflection</a>
+    </nav>
+
+    <div class="proj-content">
+
+      <section class="proj-section" id="overview">
+        <div class="story-beat">
+          <p class="eyebrow">Overview</p>
+          <h2 class="story-title">How do you turn one nonprofit's website into a connected campus for donors, hospitals, and neighbors?</h2>
+          <div class="story-body">
+            <p>The Village at Glencliff (TVG) provides medical respite care and transitional housing for medically vulnerable Nashvillians recovering after hospitalization, illness, or housing loss — with a goal that no one should have to recover from a preventable illness on the street. Every resident who completes the program has remained housed afterward, but TVG's existing website didn't reflect that impact, its updated branding, or its place in Nashville's healthcare continuum.</p>
+            <p>I joined through the Develop For Good summer program, working alongside two other designers, three engineers, a product manager, and a design/technical manager to redesign TVG's site as a "Connected Campus" — a hub meant to unify storytelling, fundraising, volunteer coordination, and, eventually, a HIPAA-compliant referral portal for hospital discharge planners.</p>
+          </div>
+          <div class="beat-subgrid">
+            <div class="beat-subcard">
+              <h3>Clinical referral pathway</h3>
+              <p>Laid the UX groundwork for a future HIPAA-compliant portal so hospital discharge planners and social workers can submit documentation and check bed availability.</p>
+            </div>
+            <div class="beat-subcard">
+              <h3>Ethical storytelling hub</h3>
+              <p>Designed space for mini-documentaries, impact stories, and press coverage, so that their platform says fresh and relevant.</p>
+            </div>
+            <div class="beat-subcard">
+              <h3>Donor &amp; volunteer engagement</h3>
+              <p>Built donor and volunteer touchpoints tied to real outcomes, supporting TVG's mission of connecting and the goal of increasing awareness of their vision.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="proj-section" id="problem">
+        <div class="story-beat">
+          <p class="eyebrow">Problem</p>
+          <h2 class="story-title">TVG's own website couldn't keep pace with what it had built.</h2>
+          <div class="story-body">
+            <p>TVG's <a href="https://www.villageatglencliff.org/" target="_blank" rel="noopener" style="color:var(--accent); text-decoration:underline; text-underline-offset:2px;">existing site</a> didn't fully communicate its mission, its updated branding, or its role in the medical respite care lifecycle — and it gave hospital partners, donors, and volunteers no clear next step. Internally, the organization also had no sustainable way for non-technical staff to keep the site updated once a project team moved on, which meant every past improvement risked going stale.</p>
+            <p>TVG was clear about what mattered most: strong storytelling, visual and social media integration, accessible modern design, and preserving the integrity of a program where every graduate has remained housed since it opened.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="proj-section" id="research">
+        <div class="story-beat">
+          <p class="eyebrow">Research Process</p>
+          <h2 class="story-title">Five audiences, one site — without diluting any of them.</h2>
+          <div class="story-body">
+            <p>We mapped separate user flows for donors, corporate sponsors, volunteers, general community members, TVG's own admin staff, and hospital case managers evaluating referrals — each with a different relationship to TVG and a different reason to land on the site. Sites like IJM.org served as a benchmark for how mission-driven organizations balance emotional storytelling with credibility and clear calls to action.</p>
+            <p>From there, we built out low-fidelity wireframes in Figma across all ten core pages — Home, About Us, Impact Stories, Donate, Volunteer, Referral, Contact, Sustainability, News &amp; Media, and a News &amp; Media blog template — before layering in TVG's brand system: deep blue and green as primary colors, turquoise and gold as accents, paired with Gravita GEO for headers and Freight Sans for body copy.</p>
+          </div>
+          <p class="cap" style="margin-top:36px; margin-bottom:0;">Low-fidelity wireframes — Events Schedule &amp; About Us</p>
+          <div class="story-media img-row">
+            <div class="img-box tall filled">
+              <img src="assets/lofi-events.jpg" alt="Low-fidelity wireframe of the Events Schedule page">
+            </div>
+            <div class="img-box tall filled">
+              <img src="assets/lofi-about.jpg" alt="Low-fidelity wireframe of the About Us page">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="proj-section" id="outcome">
+        <div class="story-beat">
+          <p class="eyebrow">Outcome</p>
+          <p class="pull-quote">Projected to help TVG reach new donors, increase awareness, and stay updated and relevant.</p>
+          <div class="story-body" style="margin-top:20px;">
+            <p>We delivered a complete design system — color, typography, components, and page templates — along with full Figma prototypes for all ten pages, plus a project handoff document so TVG's non-technical staff could keep the site current after our team rolled off. The site is designed to eventually support more hospital referrals, donors, and volunteers each year, with an information architecture built to expand into dedicated referral, donor, and volunteer portals down the line.</p>
+            <p>Hosting and domain setup were out of scope for our engagement, so the Figma prototype and Webflow handoff — not a live deployment — were our final deliverables to TVG's team.</p>
+          </div>
+          <p class="cap" style="margin-top:36px; margin-bottom:0;">Final designs — About Us &amp; Impact Stories</p>
+          <div class="story-media img-row">
+            <div class="img-box tall filled">
+              <img src="assets/hifi-about.jpg" alt="Final high-fidelity design of the About Us page">
+            </div>
+            <div class="img-box tall filled">
+              <img src="assets/hifi-impact.jpg" alt="Final high-fidelity design of the Impact Stories page">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="proj-section" id="reflection">
+        <div class="story-beat">
+          <p class="eyebrow">Reflection</p>
+          <h2 class="story-title">What I learned</h2>
+          <div class="reflection-grid">
+            <div class="reflection-card">
+              <h3>Designing inside real constraints</h3>
+              <p>Balancing warm, story-driven UX with the eventual reality of protected health information taught me how much groundwork goes into a healthcare-adjacent product before a single high-fidelity screen gets drawn.</p>
+            </div>
+            <div class="reflection-card">
+              <h3>Designing for a team, not just a screen</h3>
+              <p>Working across eight people across the globe split between design and engineering meant our Figma files had to make sense to people who'd never sat in our critiques — I got a lot more intentional about naming layers, documenting components, and writing rationale directly into the file.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</div>
+
+<section class="related-section">
+  <div class="wrap">
+    <div class="related-head">
+      <h2>You might also like</h2>
+      <a class="all-link" href="index.html">All projects &rarr;</a>
+    </div>
+    <div class="related-grid">
+      <a class="related-card" href="project-1.html">
+        <div class="thumb">
+          <img src="assets/coming-soon.jpg" alt="Animal Shelter Database — coming soon">
+          <span class="thumb-index">01</span>
+          
+        </div>
+        <p class="tag">Project 01</p>
+        <h3>Animal Shelter Database</h3>
+      </a>
+      <a class="related-card" href="project-3.html">
+        <div class="thumb">
+          <img src="assets/pcms-cover.jpg" alt="PCMS login screen">
+          <span class="thumb-index">03</span>
+          
+        </div>
+        <p class="tag">Project 03</p>
+        <h3>Professor Course Management Dashboard</h3>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="contact">
+  <div class="wrap contact-row">
+    <div>
+      <p class="contact-name">Shalini Daniel</p>
+      <p class="contact-tag">Open to internships, collaborations, and community-focused projects.</p>
+    </div>
+    <div class="contact-links">
+      <a href="mailto:shalinid15000@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/shalini-daniel/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/shaliiid" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+  <div class="wrap foot-meta">
+    <span class="local-time" id="localTime">My local time</span>
+    <span>&copy; 2026 Shalini Daniel</span>
+  </div>
+</footer>
+
+<script src="assets/interactions.js"></script>
+</body>
+</html>

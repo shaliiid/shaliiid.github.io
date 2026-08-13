@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>
+(function(){
+  try{
+    var saved = localStorage.getItem('theme');
+    if (saved === 'dark') document.documentElement.setAttribute('data-theme','dark');
+  }catch(e){}
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Shalini Daniel</title>
+<link rel="stylesheet" href="https://use.typekit.net/udq4abj.css">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="alternate icon" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+</head>
+<body>
+
+<div class="loader">
+  <div class="loader-mark"><span>ശാ</span><span>ലി</span><span>നി</span></div>
+  <div class="loader-word">Shalini Daniel</div>
+  <div class="loader-bar"><span></span></div>
+</div>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a class="nav-name" href="index.html" aria-label="Shalini Daniel — Home">ശാലിനി</a>
+    <div class="nav-links">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <a href="index.html">Work</a>
+      <a href="about.html" class="active">About</a>
+      <a href="assets/resume.pdf" target="_blank" rel="noopener">Resume</a>
+    </div>
+  </div>
+</nav>
+
+<header class="about-hero">
+  <div class="wrap intro-grid">
+    <div class="headshot">
+      <img src="assets/headshot.jpg" alt="Shalini Daniel">
+    </div>
+    <div>
+      <p class="eyebrow">About</p>
+      <h1>Hi, I'm Shalini.</h1>
+      <div class="lede">
+        <p>I'm a Computer Science student at Farmingdale State College with a minor in Data Science, and I care about building products that are as thoughtful in their design as they are in their engineering.</p>
+        <p>Outside of coursework, I'm an Adobe Student Ambassador running workshops for students on campus, and I've worked as a product designer with Develop For Good, leading end-to-end design for a healthcare-adjacent nonprofit.</p>
+      </div>
+    </div>
+    <div class="fact-list-col">
+      <ul class="fact-list">
+        <li><span class="k">Based in</span><span class="v">Long Island, NY</span></li>
+        <li><span class="k">Studying</span><span class="v">Computer Science, Data Science Minor</span></li>
+        <li><span class="k">Focus</span><span class="v">UI/UX design &amp; software engineering</span></li>
+        <li><span class="k">Currently</span><span class="v">Adobe Student Ambassador</span></li>
+        <li><span class="k">Contact</span><span class="v">shalinid15000@gmail.com</span></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<section class="timeline-section">
+  <div class="wrap">
+    <div class="timeline-head">
+      <p class="eyebrow">Experience &middot; Since March 2026</p>
+      <h2>Where I've worked</h2>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-row">
+        <span class="year">Jun 2026 — Present</span>
+        <div>
+          <h3 class="role-title">Adobe</h3>
+          <p class="role-sub">Adobe Student Ambassador</p>
+          <p class="role-desc">Host workshops and creative pop-ups introducing Adobe's tools to 100+ students on campus, partner with student clubs to integrate Adobe Express into their content workflows, and share tutorials and templates across campus social channels as part of a global ambassador network.</p>
+        </div>
+      </div>
+
+      <div class="timeline-row">
+        <span class="year">May 2026 — Aug 2026</span>
+        <div>
+          <h3 class="role-title">Develop For Good</h3>
+          <p class="role-sub">Designer</p>
+          <p class="role-desc">Led end-to-end design for client projects — ideation, wireframing, validation, high-fidelity UI, and handoff — conducting UX research and usability testing to translate client vision into user-centered products.</p>
+        </div>
+      </div>
+
+      <div class="timeline-row">
+        <span class="year">Mar 2026 — Present</span>
+        <div>
+          <h3 class="role-title">2020 Companies</h3>
+          <p class="role-sub">Field Representative</p>
+          <p class="role-desc">Lead in-store merchandising for brands including Dell, Intel, Dyson, Google, and HP — managing fixture installs, plan-o-gram compliance, and store relationships independently across multiple locations.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="timeline-section">
+  <div class="wrap">
+    <div class="timeline-head">
+      <p class="eyebrow">Education</p>
+      <h2>Where I've studied</h2>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-row">
+        <span class="year">Expected 2028</span>
+        <div>
+          <h3 class="role-title">Farmingdale State College</h3>
+          <p class="role-sub">B.S. Computer Science &middot; Data Science Minor</p>
+          <p class="role-desc">GPA 3.6. Relevant coursework: Data Structures II, Software Engineering.</p>
+        </div>
+      </div>
+
+      <div class="timeline-row">
+        <span class="year">2024 — 2025</span>
+        <div>
+          <h3 class="role-title">New York Institute of Technology</h3>
+          <p class="role-sub">B.S. Computer Science</p>
+          <p class="role-desc">T.K. Steele Scholarship, Presidential List, CyberHack Club member.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="timeline-section">
+  <div class="wrap">
+    <div class="timeline-head">
+      <p class="eyebrow">Skills</p>
+      <h2>What I work with</h2>
+    </div>
+
+    <div class="focus-grid">
+      <div class="focus-cell">
+        <span class="k">Languages</span>
+        <span class="v">Python, Java, C#, HTML, SQL</span>
+      </div>
+      <div class="focus-cell">
+        <span class="k">Tools</span>
+        <span class="v">Figma, Git, Adobe Creative Suite, Microsoft Office, Linux</span>
+      </div>
+      <div class="focus-cell">
+        <span class="k">Frameworks</span>
+        <span class="v">JavaFX, .NET MAUI, Firebase, Webflow, Sanity, WordPress</span>
+      </div>
+      <div class="focus-cell">
+        <span class="k">Interests</span>
+        <span class="v">UI/UX design, front-end development, community tech education</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="contact">
+  <div class="wrap contact-row">
+    <div>
+      <p class="contact-name">Shalini Daniel</p>
+      <p class="contact-tag">Open to internships, collaborations, and community-focused projects.</p>
+    </div>
+    <div class="contact-links">
+      <a href="mailto:shalinid15000@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/shalini-daniel/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/shaliiid" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+  <div class="wrap foot-meta">
+    <span class="local-time" id="localTime">My local time</span>
+    <span>&copy; 2026 Shalini Daniel</span>
+  </div>
+</footer>
+
+<script src="assets/interactions.js"></script>
+</body>
+</html>
